@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BackendService } from './services/backend.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'skillcloud';
+
+  products: any = [];
+
+  constructor(private backend: BackendService) {
+    this.backend.products.subscribe(data => {
+      this.products = data;
+    });
+  }
 }
