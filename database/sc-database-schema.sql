@@ -1,4 +1,4 @@
-CREATE SCHEMA `skillcloud` ;
+CREATE SCHEMA `skillcloud`;
 
 CREATE TABLE `skillcloud`.`product` (
   `product_id` INT NOT NULL AUTO_INCREMENT,
@@ -95,4 +95,9 @@ CREATE TABLE `skillcloud`.`review` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
     
-select * from order_core;
+INSERT INTO `skillcloud`.`product` (product_name, product_price, product_description, product_image_url)
+	VALUES ( 'Asustor Drivestor 2 AS1102T', 179.00, '2 Bay NAS, 1.4GHz Quad Core, Single 2.5GbE Port, 1GB RAM DDR4, Network Attached Storage, Personal Private Cloud (Diskless)', 'https://m.media-amazon.com/images/I/71rc6RVJ4ZS._AC_SX679_.jpg' );
+INSERT INTO `skillcloud`.`product` (product_name, product_price, product_description, product_image_url)
+	VALUES ( 'BUFFALO LinkStation 210', 164.99, '4TB 1-Bay NAS Network Attached Storage with HDD Hard Drives Included NAS Storage That Works as Home Cloud or Network Storage Device for Home', 'https://m.media-amazon.com/images/I/81uJnwkiQoL._AC_SX679_.jpg' );
+INSERT INTO `skillcloud`.`product` (product_name, product_price, product_description, product_image_url)
+	VALUES ( 'QNAP TS-464-8G-US', 610.93, '4 Bay High-Performance Desktop NAS with Intel Celeron Quad-core Processor, M.2 PCIe Slots and Dual 2.5GbE (2.5G/1G/100M) Network Connectivity (Diskless)', 'https://m.media-amazon.com/images/I/61aeABU2+uL._AC_SX679_.jpg' );
